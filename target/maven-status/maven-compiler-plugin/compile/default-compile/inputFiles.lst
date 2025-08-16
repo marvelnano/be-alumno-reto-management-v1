@@ -1,0 +1,11 @@
+/root/workspace/colegio/bs-student-management-v1/src/main/java/com/school/bs_student_management_v1/BsStudentManagementV1Application.java
+/root/workspace/colegio/bs-student-management-v1/src/main/java/com/school/bs_student_management_v1/controller/MiControlador.java
+/root/workspace/colegio/bs-student-management-v1/src/main/java/com/school/bs_student_management_v1/controller/UserController.java
+/root/workspace/colegio/bs-student-management-v1/src/main/java/com/school/bs_student_management_v1/model/dto/RespuestaCreadoExito.java
+/root/workspace/colegio/bs-student-management-v1/src/main/java/com/school/bs_student_management_v1/model/dto/UserRequest.java
+/root/workspace/colegio/bs-student-management-v1/src/main/java/com/school/bs_student_management_v1/model/dto/UserResponse.java
+/root/workspace/colegio/bs-student-management-v1/src/main/java/com/school/bs_student_management_v1/model/entity/UserEntity.java
+/root/workspace/colegio/bs-student-management-v1/src/main/java/com/school/bs_student_management_v1/repository/UserRepository.java
+/root/workspace/colegio/bs-student-management-v1/src/main/java/com/school/bs_student_management_v1/service/UserService.java
+/root/workspace/colegio/bs-student-management-v1/src/main/java/com/school/bs_student_management_v1/service/impl/UserServiceImpl.java
+/root/workspace/colegio/bs-student-management-v1/src/main/java/com/school/bs_student_management_v1/util/MapearUserUtil.java

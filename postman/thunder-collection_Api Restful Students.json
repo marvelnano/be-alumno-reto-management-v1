@@ -1,0 +1,81 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Api Restful Students",
+    "collectionId": "655aba83-ffe9-453f-9a08-9b86f5ac6f5f",
+    "dateExported": "2024-06-28T22:07:45.972Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "096a25f2-4e9b-4277-87a1-5ce6a0fae005",
+            "colId": "655aba83-ffe9-453f-9a08-9b86f5ac6f5f",
+            "containerId": "",
+            "name": "Students List",
+            "url": "http://localhost:8080/api/v1/students",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-06-11T15:37:21.037Z",
+            "modified": "2024-06-28T21:53:42.846Z",
+            "headers": []
+        },
+        {
+            "_id": "f8b32551-7d02-44a7-a6c2-ad5ba61bacee",
+            "colId": "655aba83-ffe9-453f-9a08-9b86f5ac6f5f",
+            "containerId": "",
+            "name": "Student By ID",
+            "url": "http://localhost:8080/api/v1/students/2",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-06-28T21:56:08.824Z",
+            "modified": "2024-06-28T21:56:08.824Z",
+            "headers": []
+        },
+        {
+            "_id": "c3594982-6be8-4c45-9e2f-3a43a5a0066f",
+            "colId": "655aba83-ffe9-453f-9a08-9b86f5ac6f5f",
+            "containerId": "",
+            "name": "Student Save",
+            "url": "http://localhost:8080/api/v1/students",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-06-11T15:38:30.289Z",
+            "modified": "2024-06-28T21:54:37.457Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombres\": \"martin\",\n  \"apellidos\": \"velasquez\",\n  \"edad\": 37\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "7b7d6c42-f069-4039-81cf-15c385f9b201",
+            "colId": "655aba83-ffe9-453f-9a08-9b86f5ac6f5f",
+            "containerId": "",
+            "name": "Student Update",
+            "url": "http://localhost:8080/api/v1/students/4",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-06-11T16:07:55.819Z",
+            "modified": "2024-06-28T21:54:46.178Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nombres\": \"martín\",\n  \"apellidos\": \"velásquez\",\n  \"edad\": 35\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "94c8bd69-5f29-4335-b908-7391bcbee5cd",
+            "colId": "655aba83-ffe9-453f-9a08-9b86f5ac6f5f",
+            "containerId": "",
+            "name": "Student Delete",
+            "url": "http://localhost:8080/api/v1/students/4",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-06-11T17:37:32.140Z",
+            "modified": "2024-06-28T21:54:52.588Z",
+            "headers": []
+        }
+    ],
+    "ref": "54C2s0sAyKsdAEjSPiDVcP7K1Zi5bLmf5UtoGdamzerL4rnFf_ZAz_19AlmiuCMMTb0TJBROoGfgD8AT4_9XoQ"
+}

@@ -1,0 +1,25 @@
+## application.properties para microservicio student-service
+spring.application.name: bs-student-management-v1
+server.port: 8082
+
+
+spring.h2.console.enabled: true
+spring.h2.console.path: /h2-console
+
+## crea db en memoria
+spring.datasource.url: jdbc:h2:mem:colegio
+
+## crea el archivo db una carpeta arriba de la carpeta actual
+##spring.datasource.url: jdbc:h2:file:../db/h2/colegio
+
+## crea el archivo db en la misma ruta de la carpeta actual
+##spring.datasource.url: jdbc:h2:file:./db/h2/colegio
+
+spring.datasource.driverClassName: org.h2.Driver
+spring.datasource.username: sa
+spring.datasource.password: password
+##spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+spring.jpa.defer-datasource-initialization: true
+
+## mostrar todas las consultas sql que se hagan
+spring.jpa.show-sql: true

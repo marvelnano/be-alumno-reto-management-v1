@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.school.bs_student_management_v1.BsStudentManagementV1ApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 23.40 s -- in com.school.bs_student_management_v1.BsStudentManagementV1ApplicationTests
