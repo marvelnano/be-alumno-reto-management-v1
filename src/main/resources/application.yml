@@ -1,25 +1,26 @@
-## application.properties para microservicio student-service
-spring.application.name: bs-student-management-v1
-server.port: 8082
+## application.yml para microservicio scotiabank-challenge
+server:
+  port: 8088
 
-
-spring.h2.console.enabled: true
-spring.h2.console.path: /h2-console
-
-## crea db en memoria
-spring.datasource.url: jdbc:h2:mem:colegio
-
-## crea el archivo db una carpeta arriba de la carpeta actual
-##spring.datasource.url: jdbc:h2:file:../db/h2/colegio
-
-## crea el archivo db en la misma ruta de la carpeta actual
-##spring.datasource.url: jdbc:h2:file:./db/h2/colegio
-
-spring.datasource.driverClassName: org.h2.Driver
-spring.datasource.username: sa
-spring.datasource.password: password
-##spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
-spring.jpa.defer-datasource-initialization: true
-
-## mostrar todas las consultas sql que se hagan
-spring.jpa.show-sql: true
+spring:
+  application:
+    name: be-scotiabank-challenge-v1
+  datasource:
+    ##url: jdbc:h2:file:./data/colegio-db   # ruta relativa al directorio donde se ejecuta la app
+    url: jdbc:h2:mem:colegio
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+      settings:
+        web-allow-others: true
+        trace: false
+  jpa:
+    hibernate:
+      ddl-auto: update    # para que Hibernate actualice el esquema sin borrar datos
+    show-sql: true        # opcional, para ver las consultas SQL en consola
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true

@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  app:
+    build: .
+    volumes:
+      - .:/home/gradleuser/app  # Montamos el directorio actual en el contenedor
+    ports:
+      - "8088:8088"
+    tty: true  # Mantiene el contenedor activo
+    environment:
+      - SPRING_PROFILES_ACTIVE=dev  # Opcional: perfil de Spring

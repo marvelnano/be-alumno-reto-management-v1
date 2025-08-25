@@ -1,36 +1,44 @@
-# bs-student-management-v1
+# be-scotiabank-challenge-v1
 
-_Repositorio de proyecto de creación de microservicio para el registro de alumnos_
-
+_Repositorio de Proyecto de creación de microservicio para el registro de alumnos_
 
 
 ## Getting Started
 
 ## Requisitos
 
-- Java 17
-- Spring Boot 3.3.0
-- Maven
-- Postgres
+- Java 11
+- Springboot 2.7.7
+- Gradle - Groovy
+- ~~H2~~ (Not Enabled)
+- Colección Map<Integer, Alumno> (Enabled)
 
 ## Configuración
 
-Para la correcta configuración del servicio, se recomienda usar la configuracione establecida en el archivo `application.properties` del proyecto.
+Para la correcta configuración del servicio, se recomienda usar la configuracione establecida en el archivo ~~`application.properties`~~ `application.yml` y `build.gradle`del proyecto.
+
+- **`build.gradle:`** Se encarga de compilar, empaquetar y gestionar las dependencias.
+- **`application.properties:`** Se encarga de la configuración de la aplicación cuando se ejecuta.
 
 ## Ejecutando las pruebas ⚙️
 
-_Abrir el repositorio(proyecto) en VSCode o Spring Tool Suite 4_
+_Abrir el repositorio(proyecto) en VSCode, Spring Tool Suite 4 o Intellij Idea_
 
 ### Realizar las pruebas de forma local 🔩
 
-* En la consola del proyecto en VSCode escribir:
+* Para compilar todo el código, ejecutar las pruebas y generar el `.jar` en `build/libs/` en la consola del proyecto en VSCode escribir:
 ```
-mvnw spring-boot:run
+./gradlew.bat build
 ```
 
-* En la consola del proyecto en VSCode linux escribir:
+* Para correr la aplicación, en la consola del proyecto en VSCode escribir:
 ```
-./mvnw spring-boot:run
+./gradlew.bat bootRun
+```
+
+* Para probar con swagger usar esto:
+```
+/swagger-ui.html
 ```
 
 * En Spring Tool Suite 4 ir a Boot Dashboard, desglosar local, seleccionar el proyecto, click derecho y start:
@@ -47,18 +55,31 @@ java -version
 java -jar lombok.jar
 ```
 
-### Reference Documentation
-For further reference, please consider the following sections:
+## Comandos Docker 🐳
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/3.2.2/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/3.2.2/maven-plugin/reference/html/#build-image)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/3.2.2/reference/htmlsingle/index.html#web)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/3.2.2/reference/htmlsingle/index.html#using.devtools)
+* Para construir la imagen y levantar los servicios definidos en `docker-compose.yml`:
+```
+docker-compose build
+docker-compose up
+```
 
-### Guides
-The following guides illustrate how to use some features concretely:
+* Para ejecutar comandos dentro del contenedor (ej: gradle build):
+```
+docker-compose exec app bash
+```
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/rest/)
+* Dentro del contenedor, puedes ejecutar:
+```
+gradle build
+gradle bootRun
+```
+
+* Para detener los servicios:
+```
+docker-compose down
+```
+
+* Para ver los logs del servicio:
+```
+docker-compose logs
+```
